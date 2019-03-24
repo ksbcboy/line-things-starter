@@ -147,7 +147,7 @@ function liffCheckAvailablityAndDo(callbackIfAvailable) {
             uiToggleDeviceConnected(false);
             callbackIfAvailable();
         } else {
-            uiStatusError("Bluetooth not available", true);
+            uiStatusError("藍芽未開啟", true);
             setTimeout(() => liffCheckAvailablityAndDo(callbackIfAvailable), 10000);
         }
     }).catch(error => {
