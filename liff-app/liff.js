@@ -58,10 +58,10 @@ function uiToggleStateButton(pressed) {
 
     if (pressed) {
         el.classList.add("pressed");
-        el.innerText = "Pressed";
+        el.innerText = "按下";
     } else {
         el.classList.remove("pressed");
-        el.innerText = "Released";
+        el.innerText = "放開";
     }
 }
 
@@ -147,7 +147,7 @@ function liffCheckAvailablityAndDo(callbackIfAvailable) {
             uiToggleDeviceConnected(false);
             callbackIfAvailable();
         } else {
-            uiStatusError("藍芽未開啟", true);
+            uiStatusError("藍芽未啟用", true);
             setTimeout(() => liffCheckAvailablityAndDo(callbackIfAvailable), 10000);
         }
     }).catch(error => {
